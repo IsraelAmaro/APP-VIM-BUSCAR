@@ -1,0 +1,35 @@
+.formulario {
+    margin-top: 2rem;
+}
+
+.formulario__legenda {
+    font-size:1.5em;
+    border: 4px double black;
+    margin-bottom: 1rem;
+}
+
+.input-container {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.input {    
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    height: 1.5em;
+    width: 100%;
+}
+
+.input::placeholder {
+    visibility: hidden;
+    color: #00000000;
+}
+
+.input-label {
+    font-size:1em;
+    transition: all .25s;
+}

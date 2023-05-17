@@ -52,19 +52,22 @@ header{
     
 }
 
-.container{    
-    display: flex;    
-    justify-content: space-around;
-     margin: 10px 0px;   
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+     margin: 10px 0px;  
+     border: 4px double red; 
 }
 
 .decricao{
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
-    align-content: space-between;
+    align-content: space-around;
     justify-content: center;
     text-align: center;
-    width: 25%;
+    width: 25%; 
+    border: 2px solid pink;   
 }
 
 .descricao-texto{
@@ -145,4 +148,33 @@ footer{
     border: 5px double red;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;  
+}
+
+/*===================== painel escolar =================*/
+.decricao-tabela{
+    width: 100%;
+    display: flex;    
+    flex-wrap: nowrap;    
+    margin: 1em;
+    padding: .5em;
+    justify-content: space-around;    
+    border: 2px solid black; 
+}
+.entrada,.saida{
+    margin: .5em;
+    background-color: blue;
+}
+.tab-fila{
+    background-color: white;
+    margin: 1.5em;
+}
+
+tr:nth-child(2n-0){
+    background-color: #ffff9d;
+}
+
+.tabela tr, td, th{ 
+    padding: 1em;
+    margin: 2em; 
+    border: 2px solid black; 
 }

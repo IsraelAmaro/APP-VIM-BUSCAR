@@ -7,6 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../css/reset.css">
    <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/inputs.css">
    <title>Controle-frequencia-escolar</title>
 </head>
 
@@ -29,7 +30,6 @@
 
    </header>
    <main class="container">
-
       <div class="cadastro-cabecalho">
          <h1>Cadastro VEM BUSCAR</h1>
       </div>
@@ -80,6 +80,7 @@
                   </select>
 
                </div>
+
             </fieldset>
             <fieldset>
                <legend class="formulario__legenda">Informações pessoais</legend>
@@ -90,7 +91,7 @@
                </div>
                <div class="input-container">
                   <label class="input-label" for="cpf">CPF</label>
-                  <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF" pattern="^(?=.*[0-9])(?!.*[a-z])(?!.*[A-Z])(?!.*[ !@#$%&_=+-]).{11}">
+                  <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF" pattern="^(?=.*[0-9])(?!.*[a-z])(?!.*[A-Z])(?!.*[ !@#$%&_=+-]).{11}" required>
                </div>
             </fieldset>
             <fieldset>
@@ -110,6 +111,42 @@
                <div class="input-container">
                   <label class="input-label" for="estado">Estado</label>
                   <input name="estado" id="estado" class="input" type="text" placeholder="Estado">
+               </div>
+            </fieldset>
+            <fieldset id="dados-responsavel">
+               <legend class="formulario__legenda">Informaçoes da pessoa responsável pelo aluno</legend>
+               <div class="input-container">
+                  <label for="responsavel" class="input-label">Nome do Responsável: </label>
+                  <input type="text" name="responsavel" id="responsavel" required placeholder="Nome completo">
+               </div>
+               <div class="input-container">
+                  <label class="input-label" for="cpf">CPF-Responsável: </label>
+                  <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF" pattern="^(?=.*[0-9])(?!.*[a-z])(?!.*[A-Z])(?!.*[ !@#$%&_=+-]).{11}" required>
+               </div>
+               <div class="input-container">
+                  <label for="parentesco" class="input-label">Parentesco: </label>
+                  <input type="text" name="parentesco" id="parentesco" required placeholder="Nome completo">
+               </div>
+               <div class="input-container">
+                  <label class="input-label" for="contato-resposavel">Contato responsável: </label>
+                  <input type="tel" id="contato-resposavel" placeholder="(XX) XXXXX-XXXX" required>
+               </div>
+               <div class="input-container">
+                  <label class="input-label" for="">Tipo de transporte</label>
+                  <select name="tipo-de-veiculo" id="" required>
+                     <option value="carro">Carro</option>
+                     <option value="moto">Moto</option>
+                     <option value="van">Transporte Escolar</option>
+                     <option value="outo">Outro</option>
+                  </select>
+                  
+               </div>
+               <div class="input-container">
+                  <label class="input-label" for="id-veiculo">Placa do veiculo: </label>
+                  <input type="number" name="" id="id-veiculo" required>
+               </div>
+               <div>               
+                  <button class="botao bot-login" data-cadastrar ='' >Novo Responsável</button>
                </div>
             </fieldset>
             <div>               
