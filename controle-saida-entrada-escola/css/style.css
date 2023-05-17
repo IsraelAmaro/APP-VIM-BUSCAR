@@ -1,0 +1,148 @@
+body, html{    
+    background: linear-gradient(90deg,#a6f72d,#bcf949, #ffff9d);
+}
+
+header{ 
+    display: flex;
+    background:#d3fb65;
+    display: flex; 
+    justify-content: space-around;     
+}
+
+.img-logo{    
+    display: inline-block;
+    height: 100px;
+    width: 100px;    
+}
+
+.menu-navegacao{
+    width: 80%;
+    display: flex;
+    align-items: end; 
+    justify-content: space-evenly;
+}
+
+.nav{
+    width: 75%; 
+    line-height: 2em;  
+    text-align: center; 
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav li, a{
+    display: inline; 
+    text-decoration: none;
+    font-weight: bold;
+    color: black; 
+}
+
+.nav li:hover{
+    background: #ccdcd3;
+    border-radius:0.3em ;
+}
+
+.bot-login{
+    text-align: center;
+    margin: 1em;
+    width: 8em;
+    line-height: 2em;
+    color: red;
+    border: none;
+    
+}
+
+.container{    
+    display: flex;    
+    justify-content: space-around;
+     margin: 10px 0px;   
+}
+
+.decricao{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+}
+
+.descricao-texto{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    margin: 1% 0;
+    height: 80%;
+    line-height: 2em;
+}
+
+.descricao-botao{   
+    height: 15%;    
+    width: 100%;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bot-cadatrar{
+    width: 250px;
+    line-height: 2em;
+    background-color:#21d7d2;
+    border: none;
+}
+
+.img-central{
+    width: 70%;
+    height: 100%;   
+}
+
+.fila-criancas{
+    width:100%;
+    height: 100%;  
+}
+
+footer{
+    background: #d3fb65;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.botao{
+    border-radius: 1em;
+    transition: 0.5s;
+    font-weight: bold;
+    border: none;
+}
+
+.botao:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/*=====================tela login=================*/
+
+.login{
+    height: 450px; 
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;  
+}
+
+.form-login{
+    background-color: #21d7d2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5em;
+    margin: 20px;
+    height: 70%; 
+    font-weight: bold;  
+    border: 5px double red;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;  
+}

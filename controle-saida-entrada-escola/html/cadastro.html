@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/reset.css">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Controle-frequencia-escolar</title>
+</head>
+
+<body>
+   <header>
+      <div class="logo" title="Logomarca da empresa">
+         <figure class="img-logo">
+            <img class="img-logo" src="../img/VIM BUSCAR!!!.png" alt="logo">
+         </figure>
+      </div>
+
+      <div class="menu-navegacao">
+         <nav class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login-pais.html">Ajuda</a></li>
+            <li><a href="login-alunos.html">Fale conosco</a></li>
+         </nav>
+
+      </div>
+
+   </header>
+   <main class="container">
+
+      <div class="cadastro-cabecalho">
+         <h1>Cadastro VEM BUSCAR</h1>
+      </div>
+      <section class="formulario">
+         <form action="" class="formulario-user">
+            <fieldset>
+               <legend class="formulario__legenda">Informações básicas</legend>
+               <div class="input-container">
+                  <label class="input-label" for="nome">Nome</label>
+                  <input name="nome-user" id="nome-user" class="input" type="text" placeholder="Nome" required>
+               </div>
+               <div class="input-container">
+                  <label class="input-label" for="email">Email</label>
+                  <input name="email" id="email" class="input" type="email" placeholder="Email" required>
+               </div>
+               <div class="input-container">
+                  <label class="input-label" for="senha">Senha</label>
+                  <input name="senha" id="senha" class="input" type="password" placeholder="Senha"
+                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%&_=+-]).{6,12}$"
+                     title="A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiuscula, um numero e não deve conter simbolos "
+                     required>
+                  <!--           
+                  Estudar sobre REGEX para utilizar dentro do atributo pattern -
+                  A delimitação das regras se dão pelos caracteres ^ e o  $
+
+                     E neste intervalo entre 0 ^ $  se define o conjunto de regras entre parenteses ()
+                     (?=) indica que permitimos a presença de certos caracteres
+
+                     (.)indica que todos os caracteres são permitidos menos quebras de linha
+                     
+                     (*) indica que contenha pelo menos um dos caracteres indicados entre colchetes
+
+                     ([---]) dentro dos colchetes indicamos os caracteres que queremos neste conjunto de regras
+
+                     (?!) negação do ?=, ou seja, indica os caracteres que não serão permitidos no conjunto de regras
+
+                  Por fim fora dos parenteses que indicam o conjutos de regras temos .{6,12} o que siguinifica que estamos limitando o tamanho da senha ente 6 numero minimo e 12 numeromaximo de caracteres 
+         
+                  -->
+               </div>
+               <div class="input-container">
+                  <label class="input-label" for="email">Categoria</label>
+                  <select name="categori-user" id="categoria" required>
+                     <option value="Aluno">Aluno</option>
+                     <option value="responsavel">Pais/responsável</option>
+                     <option value="professor">Professor</option>
+                     <option value="transporte">Transporte Escolar</option>
+                  </select>
+
+               </div>
+            </fieldset>
+            <fieldset>
+               <legend class="formulario__legenda">Informações pessoais</legend>
+               <div class="input-container">
+                  <label class="input-label" for="nascimento">Data de nascimento</label>
+                  <input name="nascimento" id="nascimento" class="input" type="date" placeholder="Data de nascimento"
+                     data-tipo="datanascimento" required>
+               </div>
+               <div class="input-container">
+                  <label class="input-label" for="cpf">CPF</label>
+                  <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF" pattern="^(?=.*[0-9])(?!.*[a-z])(?!.*[A-Z])(?!.*[ !@#$%&_=+-]).{11}">
+               </div>
+            </fieldset>
+            <fieldset>
+               <legend class="formulario__legenda">Endereço</legend>
+               <div class="input-container">
+                  <label class="input-label" for="cep">CEP</label>
+                  <input name="cep" id="cep" class="input" type="text" placeholder="CEP">
+               </div>
+               <div class="input-container">
+                  <label class="input-label" for="logradouro">Logradouro</label>
+                  <input name="logradouro" id="logradouro" class="input" type="text" placeholder="Logradouro">
+               </div>
+               <div class="input-container">
+                  <label class="input-label" for="cidade">Cidade</label>
+                  <input name="cidade" id="cidade" class="input" type="text" placeholder="Cidade">
+               </div>
+               <div class="input-container">
+                  <label class="input-label" for="estado">Estado</label>
+                  <input name="estado" id="estado" class="input" type="text" placeholder="Estado">
+               </div>
+            </fieldset>
+            <div>               
+               <button class="botao bot-login" data-cadastrar ='' >Cadastrar</button>
+            </div>
+         </form>
+      </section>
+   </main>
+   <footer>
+      <div>
+         <p>&copy; devisraelamaro@gmail.com</p>
+         <p>WhatsApp: (83) 99826-3738</p>
+         <p>abril/2023</p>
+      </div>
+      <a href="https://github.com/IsraelAmaro">github</a>
+      <a href="https://www.linkedin.com/in/israel-vaz-amaro/">linkedin</a>
+   </footer>
+   <script src="../scripts/script.js"></script>
+</body>
+
+</html>
