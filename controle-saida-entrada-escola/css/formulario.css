@@ -1,0 +1,63 @@
+.cadastro-cabecalho{
+    margin: .5em;
+    text-decoration-line:underline;
+    text-shadow: 3px 3px 5px #99928e;
+    font-weight: bold;
+    font-size: 2.2em;
+}
+.formulario {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-top: 2rem;
+    background-color:azure ;    
+}
+
+.formulario-user{
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;    
+    width: 80%;
+    padding: 1em;       
+}
+
+.fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__legenda {
+    font-size:1.5em;
+    border: 4px double black;
+    margin-bottom: 1rem;    
+}
+
+.input-container {
+    width: 80%;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;   
+    box-sizing: border-box;  
+}
+
+.input , select{       
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    height: 2em;
+}
+
+.input::placeholder {
+    visibility: hidden;
+    color: #00000000;
+}
+
+.input-label {
+    font-size:1em;
+    transition: all .25s;
+}
+
+#dados-responsavel, [data-novoUsuario]{
+    display: none ;
+}

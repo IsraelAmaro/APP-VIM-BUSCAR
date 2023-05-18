@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../css/reset.css">
    <link rel="stylesheet" href="../css/style.css">
-   <link rel="stylesheet" href="../css/inputs.css">
+   <link rel="stylesheet" href="../css/formulario.css">
    <title>Controle-frequencia-escolar</title>
 </head>
 
@@ -31,14 +31,14 @@
    </header>
    <main class="container">
       <div class="cadastro-cabecalho">
-         <h1>Cadastro VEM BUSCAR</h1>
+         <h1>Cadastro VEM BUSCAR!!!</h1>
       </div>
       <section class="formulario">
          <form action="" class="formulario-user">
-            <fieldset>
+            <fieldset class="fieldset">
                <legend class="formulario__legenda">Informações básicas</legend>
                <div class="input-container">
-                  <label class="input-label" for="nome">Nome</label>
+                  <label class="input-label" for="nome-user">Nome</label>
                   <input name="nome-user" id="nome-user" class="input" type="text" placeholder="Nome" required>
                </div>
                <div class="input-container">
@@ -71,10 +71,10 @@
                   -->
                </div>
                <div class="input-container">
-                  <label class="input-label" for="email">Categoria</label>
+                  <label class="input-label" for="email">Categoria do usuário</label>
                   <select name="categori-user" id="categoria" required>
                      <option value="Aluno">Aluno</option>
-                     <option value="responsavel">Pais/responsável</option>
+                     <option value="responsavel">Pais/Responsável</option>
                      <option value="professor">Professor</option>
                      <option value="transporte">Transporte Escolar</option>
                   </select>
@@ -82,7 +82,7 @@
                </div>
 
             </fieldset>
-            <fieldset>
+            <fieldset class="fieldset">
                <legend class="formulario__legenda">Informações pessoais</legend>
                <div class="input-container">
                   <label class="input-label" for="nascimento">Data de nascimento</label>
@@ -94,7 +94,7 @@
                   <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF" pattern="^(?=.*[0-9])(?!.*[a-z])(?!.*[A-Z])(?!.*[ !@#$%&_=+-]).{11}" required>
                </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="fieldset">
                <legend class="formulario__legenda">Endereço</legend>
                <div class="input-container">
                   <label class="input-label" for="cep">CEP</label>
@@ -109,15 +109,19 @@
                   <input name="cidade" id="cidade" class="input" type="text" placeholder="Cidade">
                </div>
                <div class="input-container">
+                  <label class="input-label" for="cidade">Bairro</label>
+                  <input name="cidade" id="bairro" class="input" type="text" placeholder="Cidade">
+               </div>
+               <div class="input-container">
                   <label class="input-label" for="estado">Estado</label>
                   <input name="estado" id="estado" class="input" type="text" placeholder="Estado">
                </div>
             </fieldset>
-            <fieldset id="dados-responsavel">
+            <fieldset class="fieldset" id="dados-responsavel">               
                <legend class="formulario__legenda">Informaçoes da pessoa responsável pelo aluno</legend>
                <div class="input-container">
                   <label for="responsavel" class="input-label">Nome do Responsável: </label>
-                  <input type="text" name="responsavel" id="responsavel" required placeholder="Nome completo">
+                  <input class="input" type="text" name="responsavel" id="responsavel" required placeholder="Nome completo">
                </div>
                <div class="input-container">
                   <label class="input-label" for="cpf">CPF-Responsável: </label>
@@ -125,32 +129,29 @@
                </div>
                <div class="input-container">
                   <label for="parentesco" class="input-label">Parentesco: </label>
-                  <input type="text" name="parentesco" id="parentesco" required placeholder="Nome completo">
+                  <input class="input" type="text" name="parentesco" id="parentesco" required placeholder="Nome completo">
                </div>
                <div class="input-container">
                   <label class="input-label" for="contato-resposavel">Contato responsável: </label>
-                  <input type="tel" id="contato-resposavel" placeholder="(XX) XXXXX-XXXX" required>
+                  <input class="input" type="tel" id="contato-resposavel" placeholder="(XX) XXXXX-XXXX" required>
                </div>
                <div class="input-container">
                   <label class="input-label" for="">Tipo de transporte</label>
-                  <select name="tipo-de-veiculo" id="" required>
+                  <select class="input" name="tipo-de-veiculo" id="" required>
                      <option value="carro">Carro</option>
                      <option value="moto">Moto</option>
                      <option value="van">Transporte Escolar</option>
                      <option value="outo">Outro</option>
-                  </select>
-                  
+                  </select>                  
                </div>
                <div class="input-container">
                   <label class="input-label" for="id-veiculo">Placa do veiculo: </label>
-                  <input type="number" name="" id="id-veiculo" required>
-               </div>
-               <div>               
-                  <button class="botao bot-login" data-cadastrar ='' >Novo Responsável</button>
-               </div>
+                  <input class="input" type="number" name="" id="id-veiculo" required>
+               </div>             
             </fieldset>
-            <div>               
-               <button class="botao bot-login" data-cadastrar ='' >Cadastrar</button>
+            <div> 
+               <button class="botao bot-login" data-novoUsuario ='' >Novo Responsável</button>              
+               <button class="botao bot-login" data-cadastrar ='' >Cadastrar</button>               
             </div>
          </form>
       </section>
@@ -165,6 +166,8 @@
       <a href="https://www.linkedin.com/in/israel-vaz-amaro/">linkedin</a>
    </footer>
    <script src="../scripts/script.js"></script>
+   <script src="../scripts/service-cep.js"></script>
+   
 </body>
 
 </html>
