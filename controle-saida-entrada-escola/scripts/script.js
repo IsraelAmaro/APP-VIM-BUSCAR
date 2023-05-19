@@ -1,3 +1,6 @@
+import { Usuario } from "./usuario.js"
+import { buscarCep, pegaCampos } from "./service-cep.js"
+
 const botoes = document.querySelectorAll('.botao')
 //Monitorar qual botão é clicado 
 botoes.forEach(botao => {
@@ -11,23 +14,26 @@ botoes.forEach(botao => {
     })
 })
 
+console.log(usuario)
 
-//Mostrar display dados responsavel
+// Mostrar cadastro do responsavel
 
-let tipoUsuario = document.querySelector('#categoria')
+let tipoUsuario = pegaCampos().categoria
 
 tipoUsuario.addEventListener('focusout', ()=>{
     let usuario = tipoUsuario.value
-    console.log(usuario)
-
-    if (usuario == 'responsavel' || usuario == 'transporte' ) {
-      let formResponsavel =  document.querySelector('#dados-responsavel')
-        formResponsavel.style.display = 'block'
-        formResponsavel.className = 'fieldset'
-      let btnNovoResponsavel=  document.querySelector('[data-novoUsuario]')
+    let formResponsavel =  document.querySelector('#dados-responsavel')
+    let btnNovoResponsavel=  document.querySelector('[data-novoUsuario]')
+    if (usuario == 'aluno') {      
+        formResponsavel.style.display = 'block'              
         btnNovoResponsavel.style.display = 'block'
+    }else{
+        formResponsavel.style.display = 'none'
+        btnNovoResponsavel.style.display = 'none'
     }
 })
 
-console.log(tipoUsuario)
+
+
+
 
